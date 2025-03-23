@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a966f7bf-f09d-42cb-97cf-6530e74199c2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/css/Styile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/bo/BOFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/bo/SuperBO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/config/FactoryConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/controller/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/controller/MainDashBordContoller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/controller/RegistrationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/dao/CrudDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/dao/DAOFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/dao/SuperDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/dto/Patients.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/dto/Payments.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/dto/Therapists.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/dto/TherapyPrograms.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/dto/TherapySessions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/dto/Users.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/entity/Patients.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/entity/Payments.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/entity/SuperEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/entity/Therapists.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/entity/TherapyPrograms.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/entity/TherapySessions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/entity/Users.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Gif/Animation - 1731857209392.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Gif/Animation - 1732073053950.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/css/MainDashBord.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/css/Screenshot 2024-11-22 005044.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/css/loging.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/css/registration.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/imege/326668_closed_lock_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/imege/8666609_user_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/imege/8666689_file_text_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/imege/8666755_users_group_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/imege/8666803_folder_documents_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/imege/Screenshot_2024-11-22_005044-removebg-preview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/imege/attention.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/imege/background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/imege/file.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/imege/inheritance.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/imege/international-day-education-cartoon-style-with-stack-books.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/imege/life-long-learning.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/imege/logo-removebg-preview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/imege/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/imege/mail.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/imege/modern-tuition-and-education-success-logo-concept-vector-42887007.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/imege/risk-analysis.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/imege/schedule.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/imege/send-mail.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/imege/test (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/imege/test.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/MainDashBord.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/loginPage.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/registrationPage.fxml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="module-info" />
+        <option value="FxmlFile" />
+        <option value="Class" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2uWo8nm9xhTgDCUZoNxu1XzYjkJ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.ORM-finel-project [clean,install,-U].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.ORM-finel-project [install].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.codeium.enabled&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Desktop/my project/sem 2/ORM/ORM-finel-project/src/main/java/lk/ijse/gdse/dto&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/User/Desktop/my project/sem 2/ORM/ORM-finel-project/src/main/java/lk/ijse/gdse/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Desktop\my project\sem 2\ORM\ORM-finel-project\src\main\java\lk\ijse\gdse\dto" />
+      <recent name="C:\Users\User\Desktop\my project\sem 2\ORM\ORM-finel-project\src\main\resources" />
+      <recent name="C:\Users\User\Desktop\my project\sem 2\ORM\ORM-finel-project\src\main\java" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Desktop\my project\sem 2\ORM\ORM-finel-project\src\main\resources\view" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="lk.ijse.gdse.entity" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn install" />
+      <command value="mvn clean install -U " />
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lk.ijse.gdse.Main" />
+      <module name="ORM-finel-project" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a966f7bf-f09d-42cb-97cf-6530e74199c2" name="Changes" comment="" />
+      <created>1742103199394</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1742103199394</updated>
+      <workItem from="1742103200226" duration="38874000" />
+      <workItem from="1742373535881" duration="14000" />
+      <workItem from="1742373566602" duration="8000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

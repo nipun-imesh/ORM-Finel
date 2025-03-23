@@ -1,0 +1,86 @@
+/* Additional styles for registration page */
+
+.registration-form {
+    -fx-background-color: white;
+}
+
+.registration-header {
+    -fx-padding: 0 0 10 0;
+}
+
+.registration-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.form-section {
+    -fx-padding: 5;
+}
+
+.form-section .title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.form-textarea {
+    -fx-pref-height: 70;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: #dddddd;
+    -fx-border-width: 1;
+    -fx-padding: 8;
+    -fx-font-size: 15px;
+}
+
+.form-textarea:focused {
+    -fx-border-color: #4a90e2;
+}
+
+.checkbox-group {
+    -fx-spacing: 10;
+}
+
+.terms-section {
+    -fx-padding: 10 0;
+    -fx-font-size: 14px;
+}
+
+.register-button {
+    -fx-background-color: #4a90e2;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 14px;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+}
+
+.register-button:hover {
+    -fx-background-color: #3a7bd5;
+}
+
+.cancel-button {
+    -fx-background-color: #f5f5f5;
+    -fx-text-fill: #333333;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 14px;
+    -fx-background-radius: 8;
+    -fx-border-color: #dddddd;
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
+    -fx-cursor: hand;
+}
+
+.cancel-button:hover {
+    -fx-background-color: #ebebeb;
+}
+
+.transparent-background {
+    -fx-background-color: transparent;
+}
+
+.transparent-background .viewport {
+    -fx-background-color: transparent;
+}

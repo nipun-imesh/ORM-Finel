@@ -1,0 +1,148 @@
+/* TherapySchedulerStyles.css */
+
+/* Root styling */
+.root {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -fx-font-size: 12px;
+    -fx-background-color: #f5f5f5;
+}
+
+/* Header section styling */
+.header-section {
+    -fx-background-color: #3498db;
+    -fx-background-radius: 0 0 5 5;
+}
+
+.title-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-padding: 5;
+}
+
+/* Sidebar styling */
+.sidebar {
+    -fx-background-color: #ecf0f1;
+    -fx-background-radius: 5;
+    -fx-border-color: #bdc3c7;
+    -fx-border-radius: 5;
+    -fx-border-width: 1;
+    -fx-min-width: 200;
+}
+
+/* Section label styling */
+.section-label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+    -fx-padding: 5 0 5 0;
+}
+
+/* Main content area styling */
+.main-content {
+    -fx-background-color: white;
+    -fx-background-radius: 5;
+    -fx-border-color: #bdc3c7;
+    -fx-border-radius: 5;
+    -fx-border-width: 1;
+}
+
+/* Footer styling */
+.footer {
+    -fx-background-color: #ecf0f1;
+    -fx-border-color: #bdc3c7;
+    -fx-border-width: 1 0 0 0;
+}
+
+/* Button styling */
+.action-button {
+    -fx-background-color: #2980b9;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 4;
+    -fx-padding: 8 15 8 15;
+}
+
+.action-button:hover {
+    -fx-background-color: #3498db;
+    -fx-cursor: hand;
+}
+
+.utility-button {
+    -fx-background-color: #7f8c8d;
+    -fx-text-fill: white;
+    -fx-background-radius: 4;
+    -fx-padding: 5 10 5 10;
+}
+
+.utility-button:hover {
+    -fx-background-color: #95a5a6;
+    -fx-cursor: hand;
+}
+
+/* ListView styling */
+.list-view {
+    -fx-background-radius: 3;
+    -fx-border-radius: 3;
+    -fx-border-color: #bdc3c7;
+    -fx-border-width: 1;
+}
+
+.list-view .list-cell:selected {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+}
+
+/* TableView styling */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-table-cell-border-color: #ecf0f1;
+}
+
+.table-view .column-header {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-alignment: center-left;
+}
+
+.table-row-cell {
+    -fx-background-color: white;
+    -fx-border-color: #ecf0f1;
+    -fx-border-width: 0 0 1 0;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f9f9f9;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+}
+
+/* DatePicker styling */
+.date-picker {
+    -fx-background-color: white;
+    -fx-border-color: #bdc3c7;
+    -fx-border-radius: 3;
+}
+
+.date-picker .arrow-button {
+    -fx-background-color: #3498db;
+    -fx-background-radius: 0 3 3 0;
+}
+
+.date-picker .arrow-button .arrow {
+    -fx-background-color: white;
+}
+
+/* Status label styling */
+#statusLabel {
+    -fx-text-fill: #7f8c8d;
+    -fx-font-style: italic;
+}

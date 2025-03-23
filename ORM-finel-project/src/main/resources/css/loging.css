@@ -1,0 +1,98 @@
+/* styles.css */
+
+.root {
+    -fx-background-color: #f5f7fa;
+    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+.login-container {
+    -fx-background-color: white;
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 15, 0, 0, 0);
+}
+
+.image-section {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, rgba(0, 123, 255, 0.6), rgba(92, 183, 228, 0.6));
+    -fx-background-image: url("images/serene-nature.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+}
+
+.header-text {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.subheader-text {
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+    -fx-line-spacing: 5px;
+}
+
+.login-form {
+    -fx-background-color: white;
+}
+
+.login-header {
+    -fx-padding: 0 0 20 0;
+}
+
+.login-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.form-group {
+    -fx-spacing: 8;
+}
+
+.form-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #555555;
+}
+
+.form-input {
+    -fx-pref-height: 40;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: #dddddd;
+    -fx-border-width: 1;
+    -fx-padding: 0 15;
+    -fx-font-size: 15px;
+}
+
+.form-input:focused {
+    -fx-border-color: #4a90e2;
+}
+
+.remember-forgot {
+    -fx-font-size: 14px;
+}
+
+.login-button {
+    -fx-background-color: #4a90e2;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 14px;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+}
+
+.login-button:hover {
+    -fx-background-color: #3a7bd5;
+}
+
+.language-selector {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-background-radius: 4;
+    -fx-padding: 5 10;
+    -fx-alignment: top-right;
+}
+
+.language-dropdown {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}

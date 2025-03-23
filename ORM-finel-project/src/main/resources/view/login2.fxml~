@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="600" prefWidth="900" styleClass="root" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse.controller.LoginController">
+
+    <stylesheets>
+        <URL value="@../css/sty.css" />
+    </stylesheets>
+
+    <HBox prefHeight="600" prefWidth="900">
+        <!-- Left side - Image section -->
+        <StackPane styleClass="image-section">
+            <VBox alignment="CENTER_LEFT" maxWidth="478.0" prefHeight="600.0" prefWidth="476.0" spacing="15">
+                <padding>
+                    <Insets bottom="40" left="40" right="40" top="40" />
+                </padding>
+
+                <Label styleClass="header-text" text="ABC Mental Health Therapy Center" wrapText="true" />
+            </VBox>
+        </StackPane>
+
+        <!-- Right side - Login form -->
+        <VBox alignment="CENTER" prefHeight="600.0" prefWidth="586.0" spacing="25" styleClass="login-form" HBox.hgrow="ALWAYS">
+            <padding>
+                <Insets bottom="50" left="50" right="50" top="50" />
+            </padding>
+
+            <!-- Logo and title -->
+            <VBox alignment="CENTER" spacing="20" styleClass="login-header">
+                <ImageView fitWidth="120" preserveRatio="true">
+                    <Image url="@../imege/logo.png" />
+                </ImageView>
+                <Label styleClass="login-title" text="Staff Login" />
+            </VBox>
+
+            <!-- Username field -->
+            <VBox spacing="8" styleClass="form-group">
+                <Label styleClass="form-label" text="Username" />
+                <TextField fx:id="usernameField" prefWidth="506.0" promptText="Enter your username" styleClass="form-input" />
+            </VBox>
+
+            <!-- Password field -->
+            <VBox spacing="8" styleClass="form-group">
+                <Label styleClass="form-label" text="Password" />
+                <PasswordField fx:id="passwordField" promptText="Enter your password" styleClass="form-input" />
+            </VBox>
+
+            <!-- Remember me and forgot password -->
+            <HBox alignment="CENTER" spacing="80" styleClass="remember-forgot">
+                <HBox alignment="CENTER_LEFT" spacing="5" />
+                <Hyperlink onAction="#handleForgotPassword" text="Forgot password?" />
+            </HBox>
+
+            <!-- Login button -->
+            <Button onAction="#handleLogin" prefWidth="Infinity" styleClass="login-button" text="Login" />
+         <opaqueInsets>
+            <Insets top="43.0" />
+         </opaqueInsets>
+        </VBox>
+    </HBox>
+</AnchorPane>

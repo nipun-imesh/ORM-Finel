@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="742.0" prefWidth="1191.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse.controller.MainDashBordContoller">
+    <stylesheets>
+        <URL value="@../css/MainDashBord.css" />
+    </stylesheets>
+      <VBox prefHeight="742.0" prefWidth="280" spacing="5" styleClass="sidebar">
+
+                <!-- Navigation Menu -->
+          <ScrollPane fitToWidth="true" prefHeight="325.0" prefWidth="280.0" styleClass="sidebar-scroll" />
+           <VBox prefHeight="571.0" prefWidth="280.0" spacing="5" styleClass="menu-container">
+               <Button fx:id="BUTPaymentnvoiceManagement" onMouseClicked="#LogPaymentManagement" styleClass="menu-button" text="👉  Payment &amp; Invoice Management" />
+               <Button fx:id="BUTPatientManagement" onMouseClicked="#LogPatientManagement" styleClass="menu-button" text="👉  Patient Management" />
+               <Button fx:id="BUTTherapySessionScheduling" onMouseClicked="#LogTherapySessionScheduling" styleClass="menu-button" text="👉  Therapy Session Scheduling" />
+               <Button fx:id="BUTReportingAnalytics" onMouseClicked="#LogReportingAnalytics" styleClass="menu-button" text="👉  Reporting &amp; Analytics" />
+               <Button fx:id="BUTTherapistManagement" onMouseClicked="#LogTherapistManagement" styleClass="menu-button" text="👉  Therapist Management" />
+               <Button fx:id="BUTTherapyProgramManagement" onMouseClicked="#LogTherapyProgramManagement" styleClass="menu-button" text="👉  Therapy Program Management" />
+               <Button fx:id="BUTUserManagement" onMouseClicked="#LogUserManagement" styleClass="menu-button" text="👉  User Management (Admin Only)" />
+               <Button fx:id="Logout" onMouseClicked="#LogoutAction" styleClass="logout-button" text="👉  Logout" />
+           </VBox>
+      </VBox>
+       <!-- Center Logo -->
+       <VBox alignment="CENTER" layoutX="18.0" layoutY="-4.0" spacing="10" styleClass="logo-container">
+           <padding>
+               <Insets bottom="20" top="20" />
+           </padding>
+           <ImageView fitWidth="100" preserveRatio="true">
+               <Image url="@../imege/logo.png" />
+           </ImageView>
+           <Label styleClass="app-name" text="ABC Mental Health" />
+           <Label styleClass="app-subtitle" text="Therapy Center" />
+       </VBox>
+   <HBox alignment="CENTER_LEFT" layoutX="284.0" layoutY="1.0" prefHeight="72.0" prefWidth="901.0" spacing="15" styleClass="header">
+      <padding>
+         <Insets bottom="15" left="20" right="20" top="15" />
+      </padding>
+      <children>
+         <Label prefHeight="24.0" prefWidth="142.0" styleClass="page-title" text="Dashboard" />
+         <HBox prefHeight="50.0" prefWidth="530.0" HBox.hgrow="ALWAYS" />
+         <HBox alignment="CENTER" prefHeight="50.0" prefWidth="174.0" spacing="10" styleClass="user-info">
+            <children>
+               <Label fx:id="LBrole" prefHeight="24.0" prefWidth="74.0" />
+               <ImageView fitHeight="40" fitWidth="40" styleClass="user-avatar">
+                  <image>
+                     <Image url="@../imege/8666609_user_icon.png" />
+                  </image>
+               </ImageView>
+            </children>
+         </HBox>
+      </children>
+   </HBox>
+   <AnchorPane fx:id="ANKLoadPage" layoutX="297.0" layoutY="78.0" prefHeight="660.0" prefWidth="880.0">
+      <children>
+         <HBox alignment="CENTER" layoutX="9.0" layoutY="227.0" spacing="20" styleClass="stats-container">
+            <children>
+               <VBox alignment="CENTER" styleClass="stat-card">
+                  <children>
+                     <Label fx:id="therapistCountLabel" styleClass="stat-number" text="0" />
+                     <Label styleClass="stat-label" text="Therapists" />
+                  </children>
+               </VBox>
+               <VBox alignment="CENTER" styleClass="stat-card">
+                  <children>
+                     <Label fx:id="patientCountLabel" styleClass="stat-number" text="0" />
+                     <Label styleClass="stat-label" text="Patients" />
+                  </children>
+               </VBox>
+               <VBox alignment="CENTER" styleClass="stat-card">
+                  <children>
+                     <Label fx:id="programCountLabel" styleClass="stat-number" text="0" />
+                     <Label styleClass="stat-label" text="Programs" />
+                  </children>
+               </VBox>
+               <VBox alignment="CENTER" styleClass="stat-card">
+                  <children>
+                     <Label fx:id="sessionCountLabel" styleClass="stat-number" text="0" />
+                     <Label styleClass="stat-label" text="Sessions Today" />
+                  </children>
+               </VBox>
+            </children>
+         </HBox>
+         <Label layoutX="178.0" layoutY="110.0" styleClass="welcome-header" text="Welcome to ABC Mental Health Therapy Center">
+            <font>
+               <Font size="24" />
+            </font>
+         </Label>
+      </children></AnchorPane>
+</AnchorPane>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane fx:id="mainContainer" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.therapy.scheduler.TherapySchedulerController"
+            stylesheets="@../css/test.css">
+    <top>
+        <VBox spacing="10" styleClass="header-section">
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+            <HBox alignment="CENTER">
+                <Label text="Therapy Session Scheduler" styleClass="title-label"/>
+            </HBox>
+            <HBox spacing="10" alignment="CENTER">
+                <Button text="New Appointment" fx:id="newAppointmentBtn" styleClass="action-button"/>
+                <Button text="Reschedule" fx:id="rescheduleBtn" styleClass="action-button"/>
+                <Button text="Cancel Appointment" fx:id="cancelBtn" styleClass="action-button"/>
+            </HBox>
+        </VBox>
+    </top>
+
+    <left>
+        <VBox spacing="10" styleClass="sidebar">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Label text="Therapists" styleClass="section-label"/>
+            <ListView fx:id="therapistListView" prefHeight="200" styleClass="list-view"/>
+            <Label text="Availability" styleClass="section-label"/>
+            <DatePicker fx:id="appointmentDatePicker" styleClass="date-picker"/>
+        </VBox>
+    </left>
+
+    <center>
+        <VBox spacing="10" styleClass="main-content">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Label text="Appointment Schedule" styleClass="section-label"/>
+            <TableView fx:id="appointmentTableView" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="timeColumn" text="Time" prefWidth="75"/>
+                    <TableColumn fx:id="patientColumn" text="Patient" prefWidth="120"/>
+                    <TableColumn fx:id="therapistColumn" text="Therapist" prefWidth="120"/>
+                    <TableColumn fx:id="sessionTypeColumn" text="Session Type" prefWidth="100"/>
+                    <TableColumn fx:id="statusColumn" text="Status" prefWidth="80"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" spacing="10" styleClass="footer">
+            <padding>
+                <Insets top="10" right="15" bottom="15" left="15"/>
+            </padding>
+            <Label fx:id="statusLabel" text="Ready" HBox.hgrow="ALWAYS"/>
+            <Button text="Help" fx:id="helpBtn" styleClass="utility-button"/>
+            <Button text="Settings" fx:id="settingsBtn" styleClass="utility-button"/>
+        </HBox>
+    </bottom>
+</BorderPane>
