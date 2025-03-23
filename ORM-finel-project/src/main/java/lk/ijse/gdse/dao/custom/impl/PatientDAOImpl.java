@@ -16,7 +16,6 @@ public class PatientDAOImpl implements PatientDAO {
         session.getTransaction().commit();
         session.close();
         return true;
-
     }
 
     @Override
