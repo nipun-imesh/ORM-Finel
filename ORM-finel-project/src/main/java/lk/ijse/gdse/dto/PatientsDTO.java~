@@ -22,11 +22,4 @@ public class PatientsDTO {
        this.contact = contact;
        this.regDate = regDate;
    }
-
-    public PatientsDTO(String id, String name, String contact, String date) {
-       this.id = id;
-       this.name = name;
-       this.contact = contact;
-       this.regDate = Date.valueOf(date);
-    }
 }

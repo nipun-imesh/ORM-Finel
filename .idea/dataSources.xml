@@ -17,7 +17,7 @@ C:/Users/User/Desktop/my project/sem 2/ORM/ORM-finel-project/src/main/resources/
       </jdbc-additional-properties>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="orm_finel_project@localhost" uuid="46f99f2c-56db-4492-b23b-9ccb8b53d908">
+    <data-source source="LOCAL" name="orm_finel_project@localhost" uuid="34c2bbbb-7b0e-4af8-8566-c11f135e2699">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>

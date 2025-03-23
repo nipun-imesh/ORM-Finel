@@ -8,6 +8,9 @@ module ORM.finel.project {
     requires java.naming;
     requires static lombok;
     requires spring.security.crypto;
+    requires annotations;
+    opens lk.ijse.gdse.bo to javafx.fxml;
+    exports lk.ijse.gdse.bo;
 
     opens lk.ijse.gdse.controller to javafx.fxml;
     exports lk.ijse.gdse;

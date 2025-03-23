@@ -7,7 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.Date;
+import java.sql.Date;
 
 @Entity
 @NoArgsConstructor
@@ -20,4 +20,8 @@ public class Patient {
        private String name;
        private String contact;
        private Date regDate;
- }
+
+    public Patient(String id) {
+        this.id = id;
+    }
+}

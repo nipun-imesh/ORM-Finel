@@ -53,9 +53,6 @@ public class UserPageController implements Initializable {
     @FXML
     private PasswordField TXTPassword;
 
-//    @FXML
-//    private TextField TXTID;
-
     @FXML
     private Label TXTID;
 

@@ -18,10 +18,10 @@ import lombok.Setter;
 
 public class Users {
     @Id
-    String id;
-    String username;
-    String password;
-    String role;
+   private String id;
+   private String username;
+   private String password;
+   private String role;
 
 
     public Users( String id,String userName, String password, String role) {
