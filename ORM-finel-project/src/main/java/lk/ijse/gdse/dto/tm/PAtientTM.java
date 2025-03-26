@@ -1,8 +1,13 @@
 package lk.ijse.gdse.dto.tm;
 
-import lombok.Data;
+import lombok.*;
 
 import java.sql.Date;
+
+@NoArgsConstructor
+@Setter
+@Getter
+
 
 public class PAtientTM {
     private String id;
@@ -11,4 +16,10 @@ public class PAtientTM {
     private Date regDate;
 
 
+    public PAtientTM(String id, String name, String contact, Date regDate) {
+        this.id = id;
+        this.name = name;
+        this.contact = contact;
+        this.regDate = regDate;
+    }
 }

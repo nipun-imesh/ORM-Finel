@@ -1,51 +1,53 @@
 package lk.ijse.gdse.dao.custom.impl;
 
 import lk.ijse.gdse.config.FactoryConfiguration;
-import lk.ijse.gdse.dao.custom.PatientDAO;
-import lk.ijse.gdse.entity.Patient;
+import lk.ijse.gdse.dao.custom.TherapiProgameDAO;
+import lk.ijse.gdse.entity.Therapy_Program;
 import lk.ijse.gdse.entity.Users;
 import org.hibernate.Session;
+
 import java.util.List;
 
-public class PatientDAOImpl implements PatientDAO {
+public class TherapiPragameDAOImpl implements TherapiProgameDAO {
+
     @Override
-    public boolean save(Patient patient) throws Exception {
+    public boolean save(Therapy_Program therapyProgram) throws Exception {
         Session session = FactoryConfiguration.getInstance().getSession();
         session.beginTransaction();
-        session.persist(patient);
+        session.persist(therapyProgram);
         session.getTransaction().commit();
         session.close();
         return true;
     }
 
     @Override
-    public boolean update(Patient patient) throws Exception {
+    public boolean update(Therapy_Program therapyProgram) throws Exception {
         Session session = FactoryConfiguration.getInstance().getSession();
         session.beginTransaction();
-        session.merge(patient);
+        session.merge(therapyProgram);
         session.getTransaction().commit();
         session.close();
         return true;
     }
 
     @Override
-    public boolean delete(Patient patient) throws Exception {
+    public boolean delete(Therapy_Program therapyProgram) throws Exception {
         Session session = FactoryConfiguration.getInstance().getSession();
         session.beginTransaction();
-        session.remove(patient);
+        session.remove(therapyProgram);
         session.getTransaction().commit();
         session.close();
         return true;
     }
 
     @Override
-    public List<Patient> getAll() throws Exception {
+    public List<Therapy_Program> getAll() throws Exception {
         Session session = FactoryConfiguration.getInstance().getSession();
         session.beginTransaction();
-        List<Patient> patients = session.createQuery("FROM Patient").list();
+        List<Therapy_Program> therapyPrograms = session.createQuery("FROM Therapy_Program", Therapy_Program.class).list();
         session.getTransaction().commit();
         session.close();
-        return patients;
+        return therapyPrograms;
     }
 
     @Override
@@ -53,22 +55,8 @@ public class PatientDAOImpl implements PatientDAO {
         return null;
     }
 
-
     @Override
-    public String getPatientId() throws Exception {
-        Session session = FactoryConfiguration.getInstance().getSession();
-        session.beginTransaction();
-
-        String hql = "SELECT p.id FROM Patient p ORDER BY p.id DESC";
-        List<String> ids = session.createQuery(hql).setMaxResults(1).list();
-
-        session.getTransaction().commit();
-        session.close();
-
-        if (ids.isEmpty()) {
-            return null;
-        } else {
-            return ids.get(0);
-        }
+    public Therapy_Program get(String programId) {
+        return null;
     }
 }

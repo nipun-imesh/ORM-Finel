@@ -5,4 +5,5 @@ import lk.ijse.gdse.entity.Patient;
 
 
 public interface PatientDAO extends CrudDAO<Patient> {
+    String getPatientId() throws Exception;
 }

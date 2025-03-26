@@ -6,7 +6,7 @@
 
 <BorderPane fx:id="mainContainer" xmlns="http://javafx.com/javafx/11.0.1"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.therapy.scheduler.TherapySchedulerController"
+            fx:controller=""
             stylesheets="@../css/test.css">
     <top>
         <VBox spacing="10" styleClass="header-section">

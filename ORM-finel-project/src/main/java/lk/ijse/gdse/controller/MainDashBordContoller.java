@@ -112,13 +112,17 @@ public class MainDashBordContoller {
     }
 
     @FXML
-    void LogTherapistManagement(MouseEvent event) {
-
+    void LogTherapistManagement(MouseEvent event) throws IOException {
+        ANKLoadPage.getChildren().clear();
+        AnchorPane load = FXMLLoader.load(getClass().getResource("/view/theropyManagePage.fxml"));
+        ANKLoadPage.getChildren().add(load);
     }
 
     @FXML
-    void LogTherapyProgramManagement(MouseEvent event) {
-
+    void LogTherapyProgramManagement(MouseEvent event) throws IOException {
+        ANKLoadPage.getChildren().clear();
+        AnchorPane load = FXMLLoader.load(getClass().getResource("/view/therapiProgamePage.fxml"));
+        ANKLoadPage.getChildren().add(load);
     }
 
     @FXML

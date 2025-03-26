@@ -156,7 +156,7 @@ public class UserPageController implements Initializable {
             String passwords = TXTPassword.getText();
             String role = COMBRole.getValue();
 
-            if (userName.isEmpty() || passwords.isEmpty() || role.isEmpty()) {
+            if (userName.isEmpty() || id.isEmpty() || role.isEmpty()) {
                 alertController.INFORMATIONALERT("INFORMATION", "Empty Fields", Alert.AlertType.INFORMATION);
             } else {
                 String password = null;
@@ -186,6 +186,7 @@ public class UserPageController implements Initializable {
 
         }
         TBLUse.setItems(customerTMS);
+        TBLUse.refresh();
     }
 
     @FXML

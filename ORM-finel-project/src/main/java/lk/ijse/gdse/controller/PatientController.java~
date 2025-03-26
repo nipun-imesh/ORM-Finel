@@ -16,7 +16,6 @@ import lk.ijse.gdse.dto.tm.UsetTM;
 
 import java.net.URL;
 import java.sql.Date;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
@@ -86,21 +85,19 @@ public class PatientController implements Initializable {
         String id = LBPId.getText();
         String name = TXTUserName.getText();
         String contact = TXTContactNumber.getText();
-        LocalDate localDate = DATSelectBox.getValue();
+        Date date = Date.valueOf(DATSelectBox.getValue());
 
 
-        if (id.isEmpty() || name.isEmpty() || contact.isEmpty() || localDate == null) {
-            alertController.INFORMATIONALERT("INFORMATION", "Empty Fields", Alert.AlertType.INFORMATION);
-            return;
+
+        if(id.isEmpty() || name.isEmpty() || contact.isEmpty() || date.equals(null)){
+            alertController.INFORMATIONALERT("INFORMATION","Empty Fields" , Alert.AlertType.INFORMATION);
+        } else {
+            patientBO.save(new PatientsDTO(id,name,contact,date));
+
         }
-
-        Date date = Date.valueOf(localDate);
-        patientBO.save(new PatientsDTO(id, name, contact, date));
-
-        alertController.INFORMATIONALERT("INFORMATION", "Save Successfully", Alert.AlertType.INFORMATION);
+        alertController.INFORMATIONALERT("INFORMATION","Save Successfully" , Alert.AlertType.INFORMATION);
         getAll();
     }
-
 
     @FXML
     void deleteOnAction(MouseEvent event) throws Exception {

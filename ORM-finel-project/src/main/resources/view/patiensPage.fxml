@@ -66,11 +66,12 @@
                 <Button fx:id="addButton" onMouseClicked="#addOnaction" prefHeight="34.0" prefWidth="117.0" styleClass="action-button" text="Add" />
                 <Button fx:id="updateButton" onMouseClicked="#upDateOnaction" prefHeight="34.0" prefWidth="111.0" styleClass="action-button" text="Update" />
                 <Button fx:id="deleteButton" onMouseClicked="#deleteOnAction" prefHeight="34.0" prefWidth="101.0" styleClass="action-button" text="Delete" />
+            <Button fx:id="restBUT" layoutX="494.0" layoutY="10.0" onMouseClicked="#reSetOnAction" prefHeight="34.0" prefWidth="101.0" style="-fx-background-color: blue;" styleClass="action-button" text="Reset" />
             </HBox>
 
             <!-- Patient Records Table -->
             <Label styleClass="form-label" text="Patient Records:" />
-            <TableView fx:id="TBLPatient" prefHeight="241.0" prefWidth="819.0" styleClass="patient-table">
+            <TableView fx:id="TBLPatient" onMouseClicked="#petientSelectOnAction" prefHeight="241.0" prefWidth="819.0" styleClass="patient-table">
                 <columns>
                     <TableColumn fx:id="TBCid" prefWidth="100" text="ID" />
                     <TableColumn fx:id="TBCName" prefWidth="289.59998321533203" text="Name" />

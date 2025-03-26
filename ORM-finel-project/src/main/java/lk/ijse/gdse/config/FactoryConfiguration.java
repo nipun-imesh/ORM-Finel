@@ -1,7 +1,6 @@
 package lk.ijse.gdse.config;
 
-import lk.ijse.gdse.entity.Patient;
-import lk.ijse.gdse.entity.Users;
+import lk.ijse.gdse.entity.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -15,7 +14,10 @@ public class FactoryConfiguration {
         Configuration configuration = new Configuration();
         configuration.configure();
         configuration.addAnnotatedClass(Users.class)
-                .addAnnotatedClass(Patient.class);
+                .addAnnotatedClass(Patient.class)
+                .addAnnotatedClass(Therapy_Program.class)
+                .addAnnotatedClass(Therapist_Program_Assign.class)
+                .addAnnotatedClass(Therapists.class);
 
         sessionFactory = configuration.buildSessionFactory();
     }

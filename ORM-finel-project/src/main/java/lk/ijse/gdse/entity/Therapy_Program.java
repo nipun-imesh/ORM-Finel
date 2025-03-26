@@ -11,30 +11,28 @@ import lombok.Setter;
 import java.util.List;
 
 @Entity
-@AllArgsConstructor
 @NoArgsConstructor
-@Setter
+@AllArgsConstructor
 @Getter
-public class Therapists {
+@Setter
+public class Therapy_Program {
     @Id
     private String id;
     private String name;
-    private String specialization;
-    private String contact;
-    private String status;
+    private String duration;
+    private int fee;
 
-    @OneToMany(mappedBy = "therapist")
+    @OneToMany(mappedBy = "program")
     private List<Therapist_Program_Assign> therapist_programs;
 
-    public Therapists(String id) {
+    public Therapy_Program(String id) {
         this.id = id;
     }
 
-    public Therapists(String id, String name, String specialization, String contact, String status) {
+    public Therapy_Program(String id, String name, String duration, int fee) {
         this.id = id;
         this.name = name;
-        this.specialization = specialization;
-        this.contact = contact;
-        this.status = status;
+        this.duration = duration;
+        this.fee = fee;
     }
 }

@@ -1,4 +1,5 @@
-package lk.ijse.gdse.dto;
+package lk.ijse.gdse.dto.tm;
+
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,9 +10,11 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class TherapyProgramsDTO {
+
+public class TherapistsTM {
     private String id;
     private String name;
-    private String duration;
-    private int fee;
+    private String specialization;
+    private String contact;
+    private String status;
 }

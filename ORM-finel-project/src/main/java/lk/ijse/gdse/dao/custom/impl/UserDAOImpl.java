@@ -2,15 +2,10 @@ package lk.ijse.gdse.dao.custom.impl;
 
 import lk.ijse.gdse.config.FactoryConfiguration;
 import lk.ijse.gdse.dao.custom.UserDAO;
-import lk.ijse.gdse.dto.UsersDTO;
 import lk.ijse.gdse.entity.Users;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.ArrayList;
 import java.util.List;
 
 public class UserDAOImpl implements UserDAO {
@@ -84,6 +79,5 @@ public class UserDAOImpl implements UserDAO {
             return lastId;
 
     }
-
 
 }
