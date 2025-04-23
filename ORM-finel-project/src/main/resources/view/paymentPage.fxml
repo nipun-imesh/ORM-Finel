@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="620.0" prefWidth="840.0" styleClass="main-container" stylesheets="@../css/paymant.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse.controller.PaymentController">
+
+    <!-- Title -->
+    <Label layoutX="26.0" layoutY="14.0" styleClass="title" text="Payment" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
+
+    <!-- Input Form -->
+    <GridPane hgap="20" layoutX="26.0" layoutY="54.0" vgap="15" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="54.0">
+        <columnConstraints>
+            <ColumnConstraints minWidth="100" prefWidth="120" />
+            <ColumnConstraints prefWidth="250" />
+            <ColumnConstraints minWidth="100" prefWidth="120" />
+            <ColumnConstraints prefWidth="250" />
+        </columnConstraints>
+
+        <!-- Row 1 -->
+        <Label text="ID:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+
+        <Label text="Patient ID:" GridPane.rowIndex="1" />
+        <ComboBox fx:id="COMpatientId" onAction="#pationOnAction" prefWidth="250" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <Label prefHeight="18.0" prefWidth="114.0" text="Amount due:" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+
+        <Label text="Therapist ID:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        <ComboBox fx:id="COMtherapist" onAction="#therapitOnAction" prefWidth="250" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+      <Label fx:id="LBpaymentId" prefHeight="35.0" prefWidth="169.0" GridPane.columnIndex="1" />
+      <Label layoutX="10.0" layoutY="186.0" text="Program Amount:" GridPane.rowIndex="3" />
+      <Label fx:id="LBProgrameAmount" layoutX="150.0" layoutY="12.0" prefHeight="35.0" prefWidth="169.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <DatePicker fx:id="DATEPayment" prefWidth="250" GridPane.columnIndex="3" />
+   
+        <!-- Row 2 -->
+        <Label text="Payment Date:" GridPane.columnIndex="2" />
+   
+        <!-- Row 4 -->
+        <Label text="Program ID:" GridPane.rowIndex="2" />
+        <ComboBox fx:id="COMprogamrId" onAction="#programOnAction" prefWidth="250" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <ComboBox fx:id="COMSessionId" onAction="#sessionOnAction" prefWidth="250" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+   
+        <!-- Row 3 -->
+        <Label prefHeight="27.0" prefWidth="108.0" text="Session ID:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <Label layoutX="419.0" layoutY="182.0" prefHeight="18.0" prefWidth="113.0" text="Amount paid:" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+      <TextField fx:id="TXTAmoutPaid" layoutX="557.0" layoutY="176.0" promptText="Enter amount" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+      <Label fx:id="LBAmountDue" layoutX="149.0" layoutY="14.0" prefHeight="35.0" prefWidth="169.0" text="-----" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+      <rowConstraints>
+         <RowConstraints maxHeight="41.59999389648438" minHeight="35.99998779296875" prefHeight="41.59999389648438" />
+         <RowConstraints maxHeight="45.600012207031256" minHeight="40.00000610351563" prefHeight="40.00000610351563" />
+         <RowConstraints />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" />
+         <RowConstraints maxHeight="30.400000000000006" minHeight="10.0" prefHeight="30.400000000000006" />
+         <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+      </rowConstraints>
+    </GridPane>
+
+    <!-- Action Buttons -->
+    <HBox alignment="CENTER" layoutX="20.0" layoutY="342.0" spacing="10" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="342.0">
+        <Button fx:id="BUTAdd" onAction="#AddOnAction" prefWidth="150" styleClass="add-button" text="Add" />
+        <Button fx:id="BUTDelete" onAction="#deleteOnAction" prefWidth="150" styleClass="delete-button" text="Delete" />
+        <Button fx:id="BUTreset" onAction="#resetOnAction" prefWidth="150" styleClass="reset-button" text="Reset" />
+    </HBox>
+
+    <!-- Payment Records Section Title -->
+    <Label layoutX="41.0" layoutY="386.0" styleClass="section-title" text="Payment Records:" AnchorPane.leftAnchor="41.0" AnchorPane.topAnchor="386.0" />
+
+    <!-- Payment Records Table -->
+    <TableView fx:id="TBLpayment" layoutX="20.0" layoutY="420.0" onMouseClicked="#tableSelectOnaction" prefHeight="278.0" prefWidth="835.0" AnchorPane.bottomAnchor="14.399999999999977" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="420.0">
+        <columns>
+            <TableColumn fx:id="COLid" prefWidth="100" text="ID" />
+            <TableColumn fx:id="COLpatientId" prefWidth="100" text="Patient ID" />
+            <TableColumn fx:id="COLpaymentDate" prefWidth="150" text="Payment Date" />
+            <TableColumn fx:id="COLamount" prefWidth="120" text="Amount" />
+            <TableColumn fx:id="COLsession" prefWidth="120" text="Session ID" />
+            <TableColumn fx:id="COLtherapistId" prefWidth="120" text="Therapist ID" />
+            <TableColumn fx:id="COLprogramId" prefWidth="120" text="Program ID" />
+        </columns>
+    </TableView>
+
+    <!-- Pagination -->
+    <HBox alignment="CENTER" spacing="5" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+</AnchorPane>

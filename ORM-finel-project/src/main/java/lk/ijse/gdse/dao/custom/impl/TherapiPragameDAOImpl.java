@@ -6,6 +6,7 @@ import lk.ijse.gdse.entity.Therapy_Program;
 import lk.ijse.gdse.entity.Users;
 import org.hibernate.Session;
 
+import java.util.Collections;
 import java.util.List;
 
 public class TherapiPragameDAOImpl implements TherapiProgameDAO {
@@ -58,5 +59,32 @@ public class TherapiPragameDAOImpl implements TherapiProgameDAO {
     @Override
     public Therapy_Program get(String programId) {
         return null;
+    }
+
+    @Override
+    public Therapy_Program getProgameNaaneFEe(String value) {
+        Session session = FactoryConfiguration.getInstance().getSession();
+
+        Therapy_Program therapyProgram = session.get(Therapy_Program.class, value);
+        return therapyProgram;
+
+    }
+
+    @Override
+    public String getId(String id) {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        session.beginTransaction();
+
+        String hql = "SELECT p.id FROM Therapy_Program p ORDER BY p.id DESC";
+        List<String> ids = session.createQuery(hql).setMaxResults(1).list();
+
+        session.getTransaction().commit();
+        session.close();
+
+        if (ids.isEmpty()) {
+            return null;
+        } else {
+            return ids.get(0);
+        }
     }
 }

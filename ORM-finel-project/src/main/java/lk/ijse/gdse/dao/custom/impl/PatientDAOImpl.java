@@ -2,6 +2,7 @@ package lk.ijse.gdse.dao.custom.impl;
 
 import lk.ijse.gdse.config.FactoryConfiguration;
 import lk.ijse.gdse.dao.custom.PatientDAO;
+import lk.ijse.gdse.dto.TherapisassionDTO;
 import lk.ijse.gdse.entity.Patient;
 import lk.ijse.gdse.entity.Users;
 import org.hibernate.Session;
@@ -71,4 +72,5 @@ public class PatientDAOImpl implements PatientDAO {
             return ids.get(0);
         }
     }
+
 }

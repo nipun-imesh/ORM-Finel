@@ -2,6 +2,7 @@ package lk.ijse.gdse.bo.custom;
 
 import lk.ijse.gdse.bo.SuperBO;
 import lk.ijse.gdse.dto.PatientsDTO;
+import lk.ijse.gdse.dto.TherapisassionDTO;
 import lk.ijse.gdse.dto.UsersDTO;
 
 import java.util.List;

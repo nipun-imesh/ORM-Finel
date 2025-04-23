@@ -20,7 +20,7 @@ public class Therapy_Program {
     private String id;
     private String name;
     private String duration;
-    private int fee;
+    private double fee;
 
     @OneToMany(mappedBy = "program")
     private List<Therapist_Program_Assign> therapist_programs;

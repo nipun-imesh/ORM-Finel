@@ -34,4 +34,10 @@ public class TherapistsDTO {
         this.contact = contact;
         this.status = status;
     }
+
+    public TherapistsDTO(String programId) {
+        this.programId = programId;
+    }
+
+
 }

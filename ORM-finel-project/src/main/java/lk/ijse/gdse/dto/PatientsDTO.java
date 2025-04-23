@@ -29,4 +29,6 @@ public class PatientsDTO {
        this.contact = contact;
        this.regDate = Date.valueOf(date);
     }
+
+
 }

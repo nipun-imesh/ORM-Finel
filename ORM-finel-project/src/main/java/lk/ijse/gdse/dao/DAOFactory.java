@@ -10,7 +10,7 @@ public class DAOFactory {
         return daoFactory==null?daoFactory=new DAOFactory():daoFactory;
     }
     public enum DAOType {
-    USER,PATIENT,THERAPIPROGAM,THERAPIST,THERAPIST_PROGRAM_ASSIGN
+    USER,PATIENT,THERAPIPROGAM,THERAPIST,THERAPIST_PROGRAM_ASSIGN,THERAPISASSION,PAYMENT
     }
     public SuperDAO getDAO(DAOType type) {
         switch(type) {
@@ -22,7 +22,10 @@ public class DAOFactory {
                 return new TherapiPragameDAOImpl();
             case THERAPIST:
                 return new TherapistDAOImpl();
-
+            case THERAPISASSION:
+                return new TherapiSassionDAOImpl();
+            case PAYMENT:
+                return new PaymentDAOImpl();
                 default:
                 return null;
         }

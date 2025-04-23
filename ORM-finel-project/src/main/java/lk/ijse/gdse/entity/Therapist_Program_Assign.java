@@ -26,5 +26,7 @@ public class Therapist_Program_Assign {
 
 
     public Therapist_Program_Assign(Therapists therapists, Therapy_Program therapyProgram) {
+        this.therapist = therapists;
+        this.program = therapyProgram;
     }
 }

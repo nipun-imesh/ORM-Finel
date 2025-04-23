@@ -1,0 +1,38 @@
+import java.time.LocalDate;
+
+public class TherapySessionDTO {
+    private Long patientId;
+    private String patientName;
+    private String patientContact;
+    private LocalDate regDate;
+    private Long therapistId;
+    private String therapistName;
+    private String therapistContact;
+    private String specialization;
+    private String status;
+    private Long programId;
+    private String programName;
+    private int duration;
+    private double fee;
+
+    // Constructor
+    public TherapySessionDTO(Long patientId, String patientName, String patientContact, LocalDate regDate,
+                             Long therapistId, String therapistName, String therapistContact, String specialization, String status,
+                             Long programId, String programName, int duration, double fee) {
+        this.patientId = patientId;
+        this.patientName = patientName;
+        this.patientContact = patientContact;
+        this.regDate = regDate;
+        this.therapistId = therapistId;
+        this.therapistName = therapistName;
+        this.therapistContact = therapistContact;
+        this.specialization = specialization;
+        this.status = status;
+        this.programId = programId;
+        this.programName = programName;
+        this.duration = duration;
+        this.fee = fee;
+    }
+
+    // Getters & Setters (Generate them using IDE)
+}

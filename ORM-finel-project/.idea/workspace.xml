@@ -4,70 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a966f7bf-f09d-42cb-97cf-6530e74199c2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/css/Styile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/bo/BOFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/bo/SuperBO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/config/FactoryConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/controller/MainDashBordContoller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/controller/RegistrationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/dao/CrudDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/dao/DAOFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/dao/SuperDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/dto/Patients.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/dto/Payments.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/dto/Therapists.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/dto/TherapyPrograms.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/dto/TherapySessions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/dto/Users.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/entity/Patients.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/entity/Payments.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/entity/SuperEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/entity/Therapists.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/entity/TherapyPrograms.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/entity/TherapySessions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/entity/Users.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Gif/Animation - 1731857209392.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Gif/Animation - 1732073053950.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/css/MainDashBord.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/css/Screenshot 2024-11-22 005044.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/css/loging.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/css/registration.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/imege/326668_closed_lock_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/imege/8666609_user_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/imege/8666689_file_text_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/imege/8666755_users_group_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/imege/8666803_folder_documents_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/imege/Screenshot_2024-11-22_005044-removebg-preview.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/imege/attention.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/imege/background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/imege/file.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/imege/inheritance.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/imege/international-day-education-cartoon-style-with-stack-books.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/imege/life-long-learning.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/imege/logo-removebg-preview.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/imege/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/imege/mail.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/imege/modern-tuition-and-education-success-logo-concept-vector-42887007.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/imege/risk-analysis.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/imege/schedule.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/imege/send-mail.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/imege/test (1).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/imege/test.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/view/MainDashBord.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/view/loginPage.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/view/registrationPage.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="a966f7bf-f09d-42cb-97cf-6530e74199c2" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,7 +21,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -105,9 +42,11 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;com.codeium.enabled&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.preview.features.used&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Desktop/my project/sem 2/ORM/ORM-finel-project/src/main/java/lk/ijse/gdse/dto&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/AppData/Local/SceneBuilder/SceneBuilder.exe&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -115,9 +54,10 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/User/Desktop/my project/sem 2/ORM/ORM-finel-project/src/main/java/lk/ijse/gdse/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -176,6 +116,17 @@
       <workItem from="1742103200226" duration="38874000" />
       <workItem from="1742373535881" duration="14000" />
       <workItem from="1742373566602" duration="8000" />
+      <workItem from="1743272929753" duration="50000" />
+      <workItem from="1743476835707" duration="76000" />
+      <workItem from="1743520997016" duration="1082000" />
+      <workItem from="1743639960991" duration="37425000" />
+      <workItem from="1743748618027" duration="311000" />
+      <workItem from="1743748968432" duration="4658000" />
+      <workItem from="1743846122766" duration="472000" />
+      <workItem from="1743882832361" duration="3000" />
+      <workItem from="1744017008486" duration="85000" />
+      <workItem from="1744388409591" duration="1246000" />
+      <workItem from="1744537007717" duration="163000" />
     </task>
     <servers />
   </component>

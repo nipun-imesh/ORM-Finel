@@ -4,6 +4,7 @@ import lk.ijse.gdse.bo.custom.PatientBO;
 import lk.ijse.gdse.dao.DAOFactory;
 import lk.ijse.gdse.dao.custom.PatientDAO;
 import lk.ijse.gdse.dto.PatientsDTO;
+import lk.ijse.gdse.dto.TherapisassionDTO;
 import lk.ijse.gdse.entity.Patient;
 import org.hibernate.Session;
 
@@ -51,6 +52,4 @@ public class PatientBOImpl implements PatientBO {
             return String.format("PA%03d", num);
         }
     }
-
-
 }

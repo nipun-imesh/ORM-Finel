@@ -80,6 +80,7 @@ public class TherapiProgrameController  implements Initializable {
 
         try {
             viewAllOnAction(null);
+            setTheraoiProgrameId("");
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -97,15 +98,27 @@ public class TherapiProgrameController  implements Initializable {
         if(id.isEmpty() || name.isEmpty() || duration.isEmpty() || TXTfees.getText().isEmpty()){
             new Alert(Alert.AlertType.INFORMATION, "Empty Fields").show();
         }else {
-            therapiProgameBO.save(new TherapyProgramsDTO("TP002",name,duration,fees));
+            boolean isSaved = therapiProgameBO.save(new TherapyProgramsDTO(id,name,duration,fees));
+            if(!isSaved){
+                alertController.INFORMATIONALERT("INFORMATION", "Save Failed", Alert.AlertType.INFORMATION);
+            }else {
+                alertController.INFORMATIONALERT("INFORMATION", "Save Successfully", Alert.AlertType.INFORMATION);
+            }
         }
+
+        viewAllOnAction(null);
     }
 
     @FXML
     void deleteOnAction(MouseEvent event) throws Exception {
         if(TBLprogame.getSelectionModel().getSelectedItem() != null){
             String id = LBid.getText();
-            therapiProgameBO.delete(id);
+            boolean isDeleted = therapiProgameBO.delete(id);
+            if(!isDeleted){
+                alertController.INFORMATIONALERT("INFORMATION", "Delete Failed", Alert.AlertType.INFORMATION);
+            }else {
+                alertController.INFORMATIONALERT("INFORMATION", "Delete Successfully", Alert.AlertType.INFORMATION);
+            }
         }else {
             alertController.INFORMATIONALERT("INFORMATION", "Please Select a Row", Alert.AlertType.INFORMATION);
         }
@@ -139,11 +152,16 @@ public class TherapiProgrameController  implements Initializable {
             String duration = TXTduration.getText();
             int fees = Integer.parseInt(TXTfees.getText());
 
-            therapiProgameBO.update(new TherapyProgramsDTO(id,name,duration,fees));
+           boolean isUpdated = therapiProgameBO.update(new TherapyProgramsDTO(id,name,duration,fees));
+
+            if(!isUpdated){
+                alertController.INFORMATIONALERT("INFORMATION", "Update Failed", Alert.AlertType.INFORMATION);
+            }else {
+                alertController.INFORMATIONALERT("INFORMATION", "Update Successfully", Alert.AlertType.INFORMATION);
+            }
         }else {
             alertController.INFORMATIONALERT("INFORMATION", "Please Select a Row", Alert.AlertType.INFORMATION);
         }
-
     }
 
     @FXML
@@ -156,11 +174,14 @@ public class TherapiProgrameController  implements Initializable {
                     programsDTO.getId(),
                     programsDTO.getName(),
                     programsDTO.getDuration(),
-                    programsDTO.getFee()
+                    (int) programsDTO.getFee()
             ));
         }
         TBLprogame.setItems(customerTMS);
     }
 
+    void setTheraoiProgrameId( String id) {
+        LBid.setText(therapiProgameBO.getProgameId(id));
+    }
 
 }

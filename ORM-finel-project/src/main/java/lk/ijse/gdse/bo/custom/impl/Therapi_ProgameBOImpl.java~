@@ -58,7 +58,7 @@ public class Therapi_ProgameBOImpl implements TherapiProgameBO {
         if (lastId == null) {
             return "THP001";
         } else {
-            int num = Integer.parseInt(lastId.substring(3));
+            int num = Integer.parseInt(lastId.substring(2));
             num++;
             return String.format("THP%03d", num);
         }

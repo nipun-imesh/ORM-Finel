@@ -1,0 +1,37 @@
+.root {
+    -fx-font-family: 'Arial';
+}
+
+.title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 0;
+}
+
+.text-field, .date-picker, .combo-box {
+    -fx-pref-width: 250px;
+}
+
+.btn-green {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+}
+
+.btn-orange {
+    -fx-background-color: #FFA500;
+    -fx-text-fill: white;
+}
+
+.btn-red {
+    -fx-background-color: #F44336;
+    -fx-text-fill: white;
+}
+
+.btn-blue {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+}
+
+.table-view {
+    -fx-pref-height: 250px;
+}

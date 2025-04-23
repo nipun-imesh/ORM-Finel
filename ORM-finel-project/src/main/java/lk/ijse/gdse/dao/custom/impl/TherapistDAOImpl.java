@@ -2,6 +2,7 @@ package lk.ijse.gdse.dao.custom.impl;
 
 import lk.ijse.gdse.config.FactoryConfiguration;
 import lk.ijse.gdse.dao.custom.TherapistDAO;
+import lk.ijse.gdse.dto.TherapisassionDTO;
 import lk.ijse.gdse.entity.Therapist_Program_Assign;
 import lk.ijse.gdse.entity.Therapists;
 import lk.ijse.gdse.entity.Users;
@@ -55,7 +56,12 @@ public class TherapistDAOImpl implements TherapistDAO {
 
     @Override
     public boolean update(Therapists therapists) throws Exception {
-        return false;
+        Session session = FactoryConfiguration.getInstance().getSession();
+        session.beginTransaction();
+        session.merge(therapists);
+        session.getTransaction().commit();
+        session.close();
+        return true;
     }
 
     @Override
@@ -82,4 +88,5 @@ public class TherapistDAOImpl implements TherapistDAO {
     public Users search(String name) throws Exception {
         return null;
     }
+
 }

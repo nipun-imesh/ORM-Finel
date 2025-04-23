@@ -168,12 +168,20 @@ public class TherapistController implements Initializable {
     }
 
     @FXML
-    void upDAteOnaction(MouseEvent event) {
+    void upDAteOnaction(MouseEvent event) throws Exception {
         String id = LBid.getText();
         String name = TXTname.getText();
         String specialization = TXTspecializaed.getText();
         String contact = TXTcontact.getText();
         String programId = COMprogameId.getValue().toString();
+
+        TherapistsDTO therapistsDTO = new TherapistsDTO(id,name,specialization,contact,programId,"Not Available");
+        boolean isUpdated = therapistsBO.update(therapistsDTO, programId);
+        if(!isUpdated){
+            alertController.INFORMATIONALERT("INFORMATION","Update Failed" , Alert.AlertType.INFORMATION);
+        }
+        alertController.INFORMATIONALERT("INFORMATION","Update Successfully" , Alert.AlertType.INFORMATION);
+        getAll();
 
     }
 

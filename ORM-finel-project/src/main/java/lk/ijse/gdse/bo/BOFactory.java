@@ -1,10 +1,8 @@
 package lk.ijse.gdse.bo;
 
 
-import lk.ijse.gdse.bo.custom.impl.Therapi_ProgameBOImpl;
-import lk.ijse.gdse.bo.custom.impl.TherapistBOImpl;
-import lk.ijse.gdse.bo.custom.impl.UserBOImpl;
-import lk.ijse.gdse.bo.custom.impl.PatientBOImpl;
+import lk.ijse.gdse.bo.custom.impl.*;
+import lk.ijse.gdse.dao.custom.impl.TherapiSassionDAOImpl;
 
 public class BOFactory {
     private static BOFactory boFactory;
@@ -16,7 +14,7 @@ public class BOFactory {
     }
 
     public enum BOType {
-        USER, PATIENT,THERAPIPROGRAM,THERAPIST,THERAPIST_PROGRAM
+        USER, PATIENT,THERAPIPROGRAM,THERAPIST,THERAPIST_PROGRAM,THERAPISASSION,PAYMENT
     }
 
     public SuperBO getBO( BOType type) {
@@ -29,6 +27,10 @@ public class BOFactory {
                 return  new Therapi_ProgameBOImpl();
             case THERAPIST:
                 return new TherapistBOImpl();
+            case THERAPISASSION:
+                return new TherapisassionBOImpl();
+            case PAYMENT:
+                return new PaymentBOImpl();
             default:
                 return null;
         }

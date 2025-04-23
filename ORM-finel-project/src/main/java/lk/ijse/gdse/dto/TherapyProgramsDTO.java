@@ -13,5 +13,10 @@ public class TherapyProgramsDTO {
     private String id;
     private String name;
     private String duration;
-    private int fee;
+    private double fee;
+
+    public TherapyProgramsDTO(String programName, double programFee) {
+        this.name = programName;
+        this.fee =  programFee;
+    }
 }

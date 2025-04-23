@@ -80,6 +80,11 @@ public class TherapistBOImpl implements TherapistBO {
         }
     }
 
+    @Override
+    public boolean update(TherapistsDTO therapistsDTO, String programId) throws Exception {
+      return therapistDAO.update(new Therapists(therapistsDTO.getId(), therapistsDTO.getName(), therapistsDTO.getSpecialization(), therapistsDTO.getContact(), therapistsDTO.getStatus()));
+    }
+
 
     @Override
     public String getTherapistId() throws Exception {
