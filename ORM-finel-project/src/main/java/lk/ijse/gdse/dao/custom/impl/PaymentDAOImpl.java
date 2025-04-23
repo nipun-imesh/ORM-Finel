@@ -57,5 +57,23 @@ public class PaymentDAOImpl implements PaymentDAO {
         }
     }
 
+    @Override
+    public Object getAmountDueByProgramId(String programId) {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        session.beginTransaction();
+
+        String hql = "SELECT p.amountDUE FROM Payments p WHERE p.programId = :programId ORDER BY p.id DESC";
+        List<Double> amounts = session.createQuery(hql).setParameter("programId", programId).setMaxResults(1).list();
+
+        session.getTransaction().commit();
+        session.close();
+
+        if (amounts.isEmpty()) {
+            return null;
+        } else {
+            return amounts.get(0);
+        }
+    }
+
 
 }

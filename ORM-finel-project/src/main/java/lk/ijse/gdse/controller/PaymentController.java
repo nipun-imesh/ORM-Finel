@@ -4,14 +4,21 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import lk.ijse.gdse.bo.BOFactory;
 import lk.ijse.gdse.bo.custom.*;
 import lk.ijse.gdse.dto.*;
 
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -21,6 +28,9 @@ import static javafx.scene.control.Alert.AlertType.INFORMATION;
 public class PaymentController implements Initializable {
 
     @FXML
+    private AnchorPane ANKpayment;
+
+    @FXML
     private Button BUTAdd;
 
     @FXML
@@ -28,6 +38,9 @@ public class PaymentController implements Initializable {
 
     @FXML
     private Button BUTreset;
+
+    @FXML
+    private Button BUTInvoce;
 
     @FXML
     private TableColumn<?, ?> COLamount;
@@ -183,7 +196,17 @@ public class PaymentController implements Initializable {
                 }
                 COMSessionId.setItems(sessionID);
 
+            Double amountDUE = paymentBO.getAmountDueByProgramId(programId);
 
+            if (amountDUE != null) {
+
+                LBAmountDue.setText(String.valueOf(amountDUE));
+            } else {
+                for(TherapisassionDTO dto : infoList){
+                    LBAmountDue.setText(String.valueOf(dto.getProgramFee()));
+                }
+
+            }
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -232,6 +255,24 @@ public class PaymentController implements Initializable {
 
             COMprogamrId.setDisable(false);
             COMprogamrId.setItems(list);
+        }
+    }
+
+    @FXML
+    void GenatateINvoicesOnAction(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Invoices.fxml"));
+            Parent load = loader.load();
+//            InvoiceController.addptc = loader.getController();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(load));
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setResizable(false);
+
+            stage.showAndWait();
+        } catch (IOException e) {
+            new Alert(Alert.AlertType.ERROR, "Fail to load ui..!");
+            e.printStackTrace();
         }
     }
 

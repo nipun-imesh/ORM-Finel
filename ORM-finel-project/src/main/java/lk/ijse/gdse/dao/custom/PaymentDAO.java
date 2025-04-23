@@ -8,4 +8,6 @@ import java.util.List;
 public interface PaymentDAO extends CrudDAO<Payments> {
 
     String getId(String id);
+
+   Object getAmountDueByProgramId(String programId);
 }

@@ -19,7 +19,7 @@ public class PaymentBOImpl implements PaymentBO {
         if (lastId == null) {
             return "PAY001";
         } else {
-            int num = Integer.parseInt(lastId.substring(2));
+            int num = Integer.parseInt(lastId.substring(3));
             num++;
             return String.format("PAY%03d", num);
         }
@@ -45,5 +45,10 @@ public class PaymentBOImpl implements PaymentBO {
                 paymentsDTO.getProgramId(),
                 paymentsDTO.getProgramAmount()
         ));
+    }
+
+    @Override
+    public Double getAmountDueByProgramId(String programId) {
+        return (Double) paymentDAO.getAmountDueByProgramId(programId);
     }
 }

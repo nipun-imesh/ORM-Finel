@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane prefHeight="620.0" prefWidth="840.0" styleClass="main-container" stylesheets="@../css/paymant.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse.controller.PaymentController">
+<AnchorPane fx:id="ANKpayment" prefHeight="620.0" prefWidth="840.0" styleClass="main-container" stylesheets="@../css/paymant.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse.controller.PaymentController">
 
     <!-- Title -->
     <Label layoutX="26.0" layoutY="14.0" styleClass="title" text="Payment" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
@@ -70,6 +70,7 @@
         <Button fx:id="BUTAdd" onAction="#AddOnAction" prefWidth="150" styleClass="add-button" text="Add" />
         <Button fx:id="BUTDelete" onAction="#deleteOnAction" prefWidth="150" styleClass="delete-button" text="Delete" />
         <Button fx:id="BUTreset" onAction="#resetOnAction" prefWidth="150" styleClass="reset-button" text="Reset" />
+      <Button fx:id="BUTInvoce" layoutX="496.0" layoutY="10.0" onAction="#GenatateINvoicesOnAction" prefWidth="150" styleClass="reset-button" text="Invoices" />
     </HBox>
 
     <!-- Payment Records Section Title -->

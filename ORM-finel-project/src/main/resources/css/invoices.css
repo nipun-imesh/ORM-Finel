@@ -1,0 +1,125 @@
+/* invoice-styles.css */
+
+/* Main Background */
+.main-background {
+    -fx-background-color: #f5f5f5;
+}
+
+/* Content Area */
+.content-area {
+    -fx-background-color: white;
+    -fx-background-radius: 8px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);
+    -fx-padding: 15px;
+}
+
+/* Section Styles */
+.section-box {
+    -fx-background-color: #f9f9f9;
+    -fx-background-radius: 5px;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 5px;
+}
+
+.section-title {
+    -fx-text-fill: #1a73e8;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+/* Header Styles */
+.header-box {
+    -fx-background-color: #1a73e8;
+    -fx-background-radius: 5px;
+}
+
+.invoice-title {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 24px;
+}
+
+.hospital-name {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+}
+
+.address-text, .contact-text {
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+}
+
+/* Form Labels */
+.form-label {
+    -fx-text-fill: #757575;
+    -fx-font-size: 12px;
+    -fx-font-style: italic;
+}
+
+/* Value Labels - for the data display */
+.value-label {
+    -fx-background-color: #f0f7ff;
+    -fx-border-color: #b3d1ff;
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
+    -fx-padding: 5px 10px;
+    -fx-text-fill: #333333;
+    -fx-font-size: 13px;
+    -fx-min-height: 30px;
+    -fx-pref-height: 30px;
+    -fx-alignment: center-left;
+}
+
+/* Button Styles */
+.save-button, .print-button, .clear-button {
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+}
+
+.save-button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+}
+
+.save-button:hover {
+    -fx-background-color: #45a049;
+}
+
+.print-button {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+}
+
+.print-button:hover {
+    -fx-background-color: #0b7dda;
+}
+
+.clear-button {
+    -fx-background-color: #f44336;
+    -fx-text-fill: white;
+}
+
+.clear-button:hover {
+    -fx-background-color: #d32f2f;
+}
+
+/* Footer Styles */
+.footer-box {
+    -fx-background-color: #f0f7ff;
+    -fx-background-radius: 5px;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 5px;
+}
+
+.thank-you-text {
+    -fx-text-fill: #1a73e8;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+}
+
+.contact-info-text {
+    -fx-text-fill: #757575;
+    -fx-font-size: 12px;
+}

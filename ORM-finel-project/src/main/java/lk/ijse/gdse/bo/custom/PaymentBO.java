@@ -10,4 +10,5 @@ public interface PaymentBO extends SuperBO {
 
     boolean addPayment(PaymentsDTO paymentsDTO) throws Exception;
 
+    Double getAmountDueByProgramId(String programId);
 }
