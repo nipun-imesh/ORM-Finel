@@ -23,7 +23,7 @@ public class PatientBOImpl implements PatientBO {
 
     @Override
     public boolean delete(String id) throws Exception {
-        return patientDAO.delete(new Patient(id));
+        return patientDAO.delete(String.valueOf(new Patient(id)));
     }
 
     @Override
@@ -51,5 +51,10 @@ public class PatientBOImpl implements PatientBO {
             num++;
             return String.format("PA%03d", num);
         }
+    }
+
+    @Override
+    public String getCurrentPatientId(String patientId) {
+        return patientDAO.getCurrentPatientId(patientId);
     }
 }

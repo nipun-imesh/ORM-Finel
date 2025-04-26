@@ -2,7 +2,6 @@ package lk.ijse.gdse.dao.custom.impl;
 
 import lk.ijse.gdse.config.FactoryConfiguration;
 import lk.ijse.gdse.dao.custom.PatientDAO;
-import lk.ijse.gdse.dto.TherapisassionDTO;
 import lk.ijse.gdse.entity.Patient;
 import lk.ijse.gdse.entity.Users;
 import org.hibernate.Session;
@@ -30,7 +29,7 @@ public class PatientDAOImpl implements PatientDAO {
     }
 
     @Override
-    public boolean delete(Patient patient) throws Exception {
+    public boolean delete(String patient) throws Exception {
         Session session = FactoryConfiguration.getInstance().getSession();
         session.beginTransaction();
         session.remove(patient);
@@ -72,5 +71,22 @@ public class PatientDAOImpl implements PatientDAO {
             return ids.get(0);
         }
     }
+
+    @Override
+    public String getCurrentPatientId(String patientId) {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        session.beginTransaction();
+
+        String hql = "SELECT p.name FROM Patient p WHERE p.id = :id";
+        String name = (String) session.createQuery(hql)
+                .setParameter("id", patientId)
+                .uniqueResult();
+
+        session.getTransaction().commit();
+        session.close();
+
+        return name;
+    }
+
 
 }

@@ -9,4 +9,6 @@ import java.util.List;
 
 public interface PatientDAO extends CrudDAO<Patient> {
     String getPatientId() throws Exception;
+
+    String getCurrentPatientId(String patientId);
 }

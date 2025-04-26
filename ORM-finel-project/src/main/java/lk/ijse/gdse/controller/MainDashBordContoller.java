@@ -109,8 +109,10 @@ public class MainDashBordContoller {
     }
 
     @FXML
-    void LogReportingAnalytics(MouseEvent event) {
-
+    void LogReportingAnalytics(MouseEvent event) throws IOException {
+        ANKLoadPage.getChildren().clear();
+        AnchorPane load = FXMLLoader.load(getClass().getResource("/view/Report.fxml"));
+        ANKLoadPage.getChildren().add(load);
     }
 
     @FXML

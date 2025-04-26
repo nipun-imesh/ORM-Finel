@@ -41,4 +41,7 @@ public class PaymentsDTO {
         this.programAmount = programAmount;
         this.amountDUE = amountDUE;
     }
+
+    public PaymentsDTO(String patientId, String patientName, String programId, String sessionId, String sessionDate, String paymentDate, String fee, String payDate, String notAvailable) {
+    }
 }

@@ -80,7 +80,7 @@ public class TherapisassionBOImpl implements TherapisassionBO {
 
     @Override
     public boolean delete(String sessionId) throws Exception {
-        return therapiassionDAO.delete(new TherapySessions(sessionId));
+        return therapiassionDAO.delete(sessionId);
     }
 
     @Override

@@ -61,7 +61,7 @@ public class PaymentController implements Initializable {
     private TableColumn<?, ?> COLsession;
 
     @FXML
-    private TableColumn<?, ?> COLtherapistId;
+    private TableColumn<PatientsDTO, String> COLtherapistId;
 
     @FXML
     private ComboBox<String> COMSessionId;
@@ -148,7 +148,20 @@ public class PaymentController implements Initializable {
 
     @FXML
     void deleteOnAction(ActionEvent event) {
-
+        if( TXTAmoutPaid.getText().isEmpty() || COMpatientId.getValue() == null || COMprogamrId.getValue() == null || COMtherapist.getValue() == null || COMSessionId.getValue() == null){
+            alertController.INFORMATIONALERT("WARNING", "All fields are required", Alert.AlertType.WARNING);
+        }else {
+            try {
+                boolean isDeleted = paymentBO.deletePayment(LBpaymentId.getText());
+                if (isDeleted) {
+                    alertController.INFORMATIONALERT("INFORMATION", "Deleted Successfully", Alert.AlertType.INFORMATION);
+                } else {
+                    alertController.INFORMATIONALERT("ERROR", "Delete Failed", Alert.AlertType.ERROR);
+                }
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
 
     @FXML

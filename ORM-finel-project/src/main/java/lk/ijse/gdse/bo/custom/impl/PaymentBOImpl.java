@@ -51,4 +51,27 @@ public class PaymentBOImpl implements PaymentBO {
     public Double getAmountDueByProgramId(String programId) {
         return (Double) paymentDAO.getAmountDueByProgramId(programId);
     }
+
+    @Override
+    public boolean deletePayment(String text) throws Exception {
+        return paymentDAO.delete(text);
+    }
+
+    @Override
+    public List<PaymentsDTO> getAll() throws Exception {
+        List<Payments> payments = paymentDAO.getAll();
+        List<PaymentsDTO> dtoList = new ArrayList<>();
+
+        for (Payments p : payments) {
+            dtoList.add(new PaymentsDTO(
+                    p.getId(),
+                    p.getPaymentDate(),
+                    p.getAmountDUE(),
+                    p.getAmountPaid(), p.getSessionId(), p.getPatientId(), p.getTherapistId(), p.getProgramId(), p.getProgramAmount()
+            ));
+        }
+
+        return dtoList;
+    }
+
 }

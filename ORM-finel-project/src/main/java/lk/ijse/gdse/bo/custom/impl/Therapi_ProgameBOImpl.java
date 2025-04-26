@@ -22,7 +22,7 @@ public class Therapi_ProgameBOImpl implements TherapiProgameBO {
 
     @Override
     public boolean delete(String id) throws Exception {
-         return therapiProgameDAO.delete(new Therapy_Program(id));
+         return therapiProgameDAO.delete(id);
     }
 
     @Override

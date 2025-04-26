@@ -120,6 +120,10 @@ public class PatientController implements Initializable {
             String contact = TXTContactNumber.getText();
             String date = DATSelectBox.getValue().toString();
             patientBO.update(new PatientsDTO(id,name,contact,date));
+
+            if( id.isEmpty() || name.isEmpty() || contact.isEmpty() || date.equals(null)){
+                alertController.INFORMATIONALERT("INFORMATION","Empty Fields" , Alert.AlertType.INFORMATION);
+            }
         }else {
             alertController.INFORMATIONALERT("INFORMATION","Select User" , Alert.AlertType.INFORMATION);
         }

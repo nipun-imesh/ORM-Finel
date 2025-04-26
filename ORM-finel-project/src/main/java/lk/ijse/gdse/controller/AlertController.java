@@ -17,4 +17,17 @@ public class AlertController {
 
         alert.show();
     }
+
+    public void CONFIRMATIONALERT(String information, String savedSuccessfully, Alert.AlertType alertType) {
+        Alert alert = new Alert(alertType);
+        alert.setTitle(information);
+        alert.setHeaderText(null);
+        alert.setContentText(savedSuccessfully);
+
+        Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
+        stage.getScene().getStylesheets().add(getClass().getResource("/css/alert-style.css").toExternalForm());
+
+        alert.showAndWait();
+    }
+
 }

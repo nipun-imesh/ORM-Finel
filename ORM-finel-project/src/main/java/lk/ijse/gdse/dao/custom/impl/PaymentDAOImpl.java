@@ -25,14 +25,30 @@ public class PaymentDAOImpl implements PaymentDAO {
     }
 
     @Override
-    public boolean delete(Payments payments) throws Exception {
-        return false;
+    public boolean delete(String payments) throws Exception {
+       Session session = FactoryConfiguration.getInstance().getSession();
+        session.beginTransaction();
+        session.remove(payments);
+        session.getTransaction().commit();
+        session.close();
+        return true;
     }
 
     @Override
     public List<Payments> getAll() throws Exception {
-        return List.of();
+        Session session = FactoryConfiguration.getInstance().getSession();
+        session.beginTransaction();
+
+        List<Payments> payments = session.createQuery("FROM Payments ORDER BY id DESC", Payments.class)
+                .list();
+
+        session.getTransaction().commit();
+        session.close();
+
+        return payments;
     }
+
+
 
     @Override
     public Users search(String name) throws Exception {

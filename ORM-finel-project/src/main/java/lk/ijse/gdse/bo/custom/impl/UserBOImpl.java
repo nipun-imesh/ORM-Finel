@@ -67,7 +67,7 @@ public class UserBOImpl implements UserBO {
 
     @Override
     public void delete(String text) throws Exception {
-        userDAO.delete(new Users(text));
+        userDAO.delete(String.valueOf(new Users(text)));
     }
 
 

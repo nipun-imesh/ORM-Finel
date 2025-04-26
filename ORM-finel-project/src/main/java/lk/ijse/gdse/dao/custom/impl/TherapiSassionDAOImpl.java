@@ -2,9 +2,6 @@ package lk.ijse.gdse.dao.custom.impl;
 
 import lk.ijse.gdse.config.FactoryConfiguration;
 import lk.ijse.gdse.dao.custom.TherapiassionDAO;
-import lk.ijse.gdse.dto.PaymentsDTO;
-import lk.ijse.gdse.entity.Payments;
-import lk.ijse.gdse.entity.Therapists;
 import lk.ijse.gdse.entity.TherapySessions;
 import lk.ijse.gdse.entity.Users;
 import org.hibernate.Session;
@@ -33,7 +30,7 @@ public class TherapiSassionDAOImpl implements TherapiassionDAO {
     }
 
     @Override
-    public boolean delete(TherapySessions therapySessions) throws Exception {
+    public boolean delete(String therapySessions) throws Exception {
         Session session = FactoryConfiguration.getInstance().getSession();
         session.beginTransaction();
         session.remove(therapySessions);

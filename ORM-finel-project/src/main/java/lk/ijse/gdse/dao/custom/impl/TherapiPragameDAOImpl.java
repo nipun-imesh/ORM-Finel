@@ -6,7 +6,6 @@ import lk.ijse.gdse.entity.Therapy_Program;
 import lk.ijse.gdse.entity.Users;
 import org.hibernate.Session;
 
-import java.util.Collections;
 import java.util.List;
 
 public class TherapiPragameDAOImpl implements TherapiProgameDAO {
@@ -32,7 +31,7 @@ public class TherapiPragameDAOImpl implements TherapiProgameDAO {
     }
 
     @Override
-    public boolean delete(Therapy_Program therapyProgram) throws Exception {
+    public boolean delete(String therapyProgram) throws Exception {
         Session session = FactoryConfiguration.getInstance().getSession();
         session.beginTransaction();
         session.remove(therapyProgram);

@@ -100,6 +100,6 @@ public class TherapistBOImpl implements TherapistBO {
 
     @Override
     public boolean delete(String id) throws Exception {
-        return therapistDAO.delete(new Therapists(id));
+        return therapistDAO.delete(id);
     }
 }

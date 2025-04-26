@@ -32,7 +32,7 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
-    public boolean delete(Users users) throws Exception {
+    public boolean delete(String users) throws Exception {
         Session session = FactoryConfiguration.getInstance().getSession();
         session.beginTransaction();
         session.remove(users);
