@@ -24,6 +24,23 @@
     -fx-text-fill: #2c3e50;
 }
 
+.form-label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.summary-label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+    -fx-font-size: 14px;
+}
+
+.summary-value {
+    -fx-font-weight: bold;
+    -fx-text-fill: #3498db;
+    -fx-font-size: 14px;
+}
+
 /* Buttons */
 .button {
     -fx-padding: 10px 20px;
@@ -35,11 +52,19 @@
 }
 
 .report-button {
-    -fx-background-color: #3498db;
+    -fx-background-color: #e11212;
 }
 
 .report-button:hover {
     -fx-background-color: #2980b9;
+}
+
+.reset-button {
+    -fx-background-color: #1f48b3;
+}
+
+.reset-button:hover {
+    -fx-background-color: #7f8c8d;
 }
 
 /* Table Styles */
@@ -83,4 +108,18 @@
 
 .table-row-cell:selected .text {
     -fx-fill: white;
+}
+
+/* Date Range Controls */
+.date-picker {
+    -fx-background-color: white;
+    -fx-border-color: #bdc3c7;
+    -fx-border-radius: 4px;
+}
+
+.text-field {
+    -fx-background-color: white;
+    -fx-border-color: #bdc3c7;
+    -fx-border-radius: 4px;
+    -fx-padding: 5px 10px;
 }

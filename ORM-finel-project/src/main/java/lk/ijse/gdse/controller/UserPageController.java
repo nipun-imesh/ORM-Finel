@@ -118,6 +118,11 @@ public class UserPageController implements Initializable {
             }
             alertController.INFORMATIONALERT("INFORMATION", "save successfully", Alert.AlertType.INFORMATION);
         }
+        try {
+            viewAllOnAction(null);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @FXML

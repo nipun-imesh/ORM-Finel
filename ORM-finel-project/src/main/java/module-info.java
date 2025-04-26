@@ -9,6 +9,7 @@ module ORM.finel.project {
     requires static lombok;
     requires spring.security.crypto;
     requires annotations;
+    requires org.apache.pdfbox;
     opens lk.ijse.gdse.bo to javafx.fxml;
     exports lk.ijse.gdse.bo;
 

@@ -10,7 +10,6 @@ public class PatientData {
     public static ObservableList<PatientDTO> getAllPatientsData() {
         ObservableList<PatientDTO> data = FXCollections.observableArrayList();
 
-        // Static pre-defined patient data
         data.add(new PatientDTO(1001, "John Smith", "071-1234567", LocalDate.now().minusDays(2)));
         data.add(new PatientDTO(1002, "Maria Garcia", "072-9876543", LocalDate.now()));
         data.add(new PatientDTO(1003, "David Lee", "073-5551234", LocalDate.now().minusDays(10)));
@@ -21,7 +20,6 @@ public class PatientData {
         data.add(new PatientDTO(1008, "Emma Davis", "078-6667778", LocalDate.now().minusDays(5)));
         data.add(new PatientDTO(1009, "Robert Taylor", "079-1237894", LocalDate.now().minusDays(60)));
         data.add(new PatientDTO(1010, "Jennifer Martinez", "070-9871234", LocalDate.now().minusDays(7)));
-
         return data;
     }
 }
